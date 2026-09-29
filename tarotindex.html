@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Таро та езотерика · Tarot & Esoteric Consultations</title>
+<meta name="description" content="Tarot and esoteric consultations. Таро та езотеричні консультації.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Nunito+Sans:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#1c1220; --bg2:#271a2c; --ink:#f3e9dc; --muted:#b9a9b8;
+  --flame:#f2b45a; --wine:#7a2e4d; --line:#3d2b43;
+  --serif:"Cormorant Garamond",Georgia,serif;
+  --sans:"Nunito Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.65 var(--sans)}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--flame);outline-offset:3px}
+.wrap{max-width:1000px;margin:0 auto;padding:0 22px}
+
+/* header */
+header{position:sticky;top:0;z-index:5;background:rgba(28,18,32,.92);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-top:12px;padding-bottom:12px}
+.logo{font:600 22px var(--serif);text-decoration:none}
+nav{display:flex;gap:20px;align-items:center;font-size:15px}
+nav a{text-decoration:none;color:var(--muted)}
+nav a:hover{color:var(--ink)}
+.lang{display:flex;border:1px solid var(--line);border-radius:99px;overflow:hidden}
+.lang button{background:none;border:0;color:var(--muted);padding:5px 12px;font:600 13px var(--sans);cursor:pointer}
+.lang button[aria-pressed="true"]{background:var(--flame);color:#2a1a10}
+
+/* hero */
+.hero{padding:72px 0 64px;display:grid;grid-template-columns:1.4fr 1fr;gap:40px;align-items:center}
+h1{font:600 clamp(38px,6vw,64px)/1.05 var(--serif);margin:0 0 18px}
+.hero p{color:var(--muted);max-width:46ch;margin:0 0 28px}
+.btn{display:inline-block;background:var(--flame);color:#2a1a10;font-weight:600;padding:13px 26px;border-radius:99px;text-decoration:none}
+.btn:hover{background:#ffc878}
+.candle{justify-self:center;position:relative;width:70px;height:230px}
+.flame{position:absolute;left:50%;top:0;width:26px;height:56px;margin-left:-13px;border-radius:50% 50% 50% 50%/60% 60% 40% 40%;
+  background:radial-gradient(ellipse at 50% 70%,#fff3c9 0,#f2b45a 45%,rgba(242,140,60,0) 75%);
+  filter:blur(.5px);transform-origin:50% 100%;animation:flick 2.4s ease-in-out infinite;box-shadow:0 0 60px 26px rgba(242,180,90,.25)}
+.wax{position:absolute;left:0;right:0;bottom:0;top:64px;border-radius:6px 6px 4px 4px;background:linear-gradient(90deg,#d9c6b0,#f3e9dc 45%,#cdb9a3)}
+.wax:before{content:"";position:absolute;left:50%;top:-6px;width:2px;height:12px;background:#3a2a20;margin-left:-1px}
+@keyframes flick{0%,100%{transform:scale(1,1) rotate(0)}30%{transform:scale(.94,1.06) rotate(-2deg)}60%{transform:scale(1.05,.96) rotate(1.5deg)}}
+@media (prefers-reduced-motion:reduce){.flame{animation:none}html{scroll-behavior:auto}}
+
+/* sections */
+section{padding:64px 0;border-top:1px solid var(--line)}
+h2{font:600 clamp(28px,4vw,40px)/1.15 var(--serif);margin:0 0 12px}
+.lead{color:var(--muted);max-width:60ch;margin:0 0 34px}
+.about{display:grid;grid-template-columns:240px 1fr;gap:36px;align-items:start}
+.photo{aspect-ratio:3/4;border:1px dashed var(--muted);border-radius:120px 120px 8px 8px;display:grid;place-items:center;color:var(--muted);font-size:14px;text-align:center;padding:12px}
+
+/* pricing */
+.prices{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:var(--bg2);border:1px solid var(--line);padding:26px 22px;border-radius:10px;display:flex;flex-direction:column}
+.card.feat{border-color:var(--flame)}
+.card h3{font:600 26px var(--serif);margin:0 0 4px}
+.dur{color:var(--muted);font-size:14px;margin:0 0 14px}
+.card ul{margin:0 0 20px;padding-left:18px;color:var(--muted);font-size:15px;flex:1}
+.price{font:600 34px var(--serif);color:var(--flame)}
+.old{color:var(--muted);text-decoration:line-through;font-size:16px;margin-left:8px;font-family:var(--sans)}
+.note{margin-top:22px;color:var(--muted);font-size:14px}
+.badge{display:none;background:var(--wine);color:var(--ink);padding:3px 12px;border-radius:99px;font-size:13px;margin-bottom:22px}
+html[lang="uk"] .badge{display:inline-block}
+
+/* rooms/candles */
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.ph{aspect-ratio:4/3;background:var(--bg2);border:1px dashed var(--line);border-radius:10px;display:grid;place-items:center;color:var(--muted);font-size:14px;padding:12px;text-align:center}
+.cap{margin:8px 0 0;font-size:15px;color:var(--muted)}
+
+/* contact */
+.contact a.btn{margin:0 10px 10px 0}
+footer{padding:28px 0;border-top:1px solid var(--line);color:var(--muted);font-size:14px}
+
+@media (max-width:760px){
+  .hero,.about{grid-template-columns:1fr}
+  .candle{order:-1;height:170px}
+  .prices,.gallery{grid-template-columns:1fr}
+  nav a{display:none}
+  .photo{max-width:220px}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="logo" href="#top">Your Name</a>
+    <nav>
+      <a href="#about" data-i18n="nav_about"></a>
+      <a href="#prices" data-i18n="nav_prices"></a>
+      <a href="#space" data-i18n="nav_space"></a>
+      <a href="#contact" data-i18n="nav_contact"></a>
+      <div class="lang" role="group" aria-label="Language">
+        <button data-lang="uk" aria-pressed="true">UA</button>
+        <button data-lang="en" aria-pressed="false">EN</button>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="wrap hero">
+    <div>
+      <h1 data-i18n="h1"></h1>
+      <p data-i18n="hero_p"></p>
+      <a class="btn" href="#prices" data-i18n="cta"></a>
+    </div>
+    <div class="candle" aria-hidden="true"><div class="flame"></div><div class="wax"></div></div>
+  </div>
+
+  <section id="about"><div class="wrap about">
+    <div class="photo" data-i18n="photo"></div>
+    <div>
+      <h2 data-i18n="about_h"></h2>
+      <p data-i18n="about_p1"></p>
+      <p data-i18n="about_p2"></p>
+    </div>
+  </div></section>
+
+  <section id="prices"><div class="wrap">
+    <h2 data-i18n="prices_h"></h2>
+    <p class="lead" data-i18n="prices_lead"></p>
+    <span class="badge" data-i18n="discount"></span>
+    <div class="prices" id="priceGrid"></div>
+    <p class="note" data-i18n="prices_note"></p>
+  </div></section>
+
+  <section id="space"><div class="wrap">
+    <h2 data-i18n="space_h"></h2>
+    <p class="lead" data-i18n="space_lead"></p>
+    <div class="gallery">
+      <figure style="margin:0"><div class="ph" data-i18n="ph_room"></div><figcaption class="cap" data-i18n="cap_room"></figcaption></figure>
+      <figure style="margin:0"><div class="ph" data-i18n="ph_candles"></div><figcaption class="cap" data-i18n="cap_candles"></figcaption></figure>
+      <figure style="margin:0"><div class="ph" data-i18n="ph_cards"></div><figcaption class="cap" data-i18n="cap_cards"></figcaption></figure>
+    </div>
+  </div></section>
+
+  <section id="contact"><div class="wrap contact">
+    <h2 data-i18n="contact_h"></h2>
+    <p class="lead" data-i18n="contact_p"></p>
+    <!-- TODO: replace with your real links -->
+    <a class="btn" href="https://t.me/your_username">Telegram</a>
+    <a class="btn" href="https://instagram.com/your_username">Instagram</a>
+    <a class="btn" href="mailto:you@example.com">Email</a>
+  </div></section>
+</main>
+
+<footer><div class="wrap" data-i18n="footer"></div></footer>
+
+<script>
+/* ===== EDIT HERE: prices ===== */
+const SERVICES = [
+  { id:"quick", uah:400,  uahOld:700,  eur:15 },
+  { id:"full",  uah:900,  uahOld:1500, eur:35, featured:true },
+  { id:"deep",  uah:1500, uahOld:2500, eur:60 }
+];
+
+/* ===== EDIT HERE: texts ===== */
+const T = {
+  uk:{
+    nav_about:"Про мене", nav_prices:"Ціни", nav_space:"Простір", nav_contact:"Контакти",
+    h1:"Таро та езотеричні консультації",
+    hero_p:"Спокійна розмова при свічках: розклад, який допомагає побачити ситуацію ясніше та знайти наступний крок.",
+    cta:"Обрати консультацію",
+    photo:"Тут буде ваше фото",
+    about_h:"Про мене",
+    about_p1:"Мене звати [Ім'я]. Я працюю з картами Таро та езотеричними практиками [X] років. Розкажіть тут коротко, як ви прийшли до цього шляху.",
+    about_p2:"Опишіть свій підхід: з якими питаннями до вас звертаються, як проходить сесія, що людина отримає після розмови.",
+    prices_h:"Консультації та ціни",
+    prices_lead:"Оберіть формат, який підходить вам. Консультації проходять онлайн.",
+    discount:"Знижка для України",
+    prices_note:"Ціни вказано за одну консультацію. Оплата наперед.",
+    space_h:"Мій простір",
+    space_lead:"Кімната, де проходять консультації, свічки ручної роботи та колода, з якою я працюю.",
+    ph_room:"Фото кімнати", ph_candles:"Фото свічок", ph_cards:"Фото колоди",
+    cap_room:"Кімната для консультацій", cap_candles:"Свічки ручної роботи", cap_cards:"Моя колода",
+    contact_h:"Записатися",
+    contact_p:"Напишіть мені, і ми оберемо зручний час.",
+    footer:"© 2026 Your Name",
+    quick:{n:"Швидкий розклад", d:"20 хв", l:["Одне питання","Розклад на 3 карти","Відповідь текстом або голосом"]},
+    full:{n:"Повна консультація", d:"60 хв", l:["До 3 питань","Детальний розклад","Записи розмови після сесії"]},
+    deep:{n:"Глибока сесія", d:"90 хв", l:["Аналіз ситуації","Кілька розкладів","Рекомендації та план дій"]},
+    book:"Записатися"
+  },
+  en:{
+    nav_about:"About", nav_prices:"Pricing", nav_space:"My space", nav_contact:"Contact",
+    h1:"Tarot & esoteric consultations",
+    hero_p:"A calm conversation by candlelight: a reading that helps you see your situation more clearly and find your next step.",
+    cta:"Choose a session",
+    photo:"Your photo goes here",
+    about_h:"About me",
+    about_p1:"I'm [Name]. I've worked with Tarot and esoteric practices for [X] years. Briefly tell here how you came to this path.",
+    about_p2:"Describe your approach: what people come to you for, how a session runs, and what they leave with.",
+    prices_h:"Sessions & pricing",
+    prices_lead:"Pick the format that suits you. All sessions take place online.",
+    discount:"",
+    prices_note:"Prices are per session. Payment in advance.",
+    space_h:"My space",
+    space_lead:"The room where sessions happen, my handmade candles and the deck I read with.",
+    ph_room:"Room photo", ph_candles:"Candles photo", ph_cards:"Deck photo",
+    cap_room:"The consultation room", cap_candles:"Handmade candles", cap_cards:"My deck",
+    contact_h:"Book a session",
+    contact_p:"Message me and we'll find a time that works.",
+    footer:"© 2026 Your Name",
+    quick:{n:"Quick reading", d:"20 min", l:["One question","3-card spread","Answer by text or voice"]},
+    full:{n:"Full consultation", d:"60 min", l:["Up to 3 questions","Detailed spread","Session notes sent afterwards"]},
+    deep:{n:"Deep session", d:"90 min", l:["In-depth analysis","Several spreads","Guidance and action plan"]},
+    book:"Book now"
+  }
+};
+
+const CONTACT = "#contact";
+let lang = "uk";
+
+function render(){
+  const t = T[lang];
+  document.documentElement.lang = lang;
+  document.querySelectorAll("[data-i18n]").forEach(el => el.textContent = t[el.dataset.i18n] ?? "");
+  document.querySelectorAll(".lang button").forEach(b => b.setAttribute("aria-pressed", b.dataset.lang === lang));
+  document.getElementById("priceGrid").innerHTML = SERVICES.map(s => {
+    const c = t[s.id];
+    const price = lang === "uk"
+      ? `<span class="price">${s.uah} ₴</span><span class="old">${s.uahOld} ₴</span>`
+      : `<span class="price">€${s.eur}</span>`;
+    return `<article class="card${s.featured ? " feat" : ""}">
+      <h3>${c.n}</h3><p class="dur">${c.d}</p>
+      <ul>${c.l.map(i => `<li>${i}</li>`).join("")}</ul>
+      <div>${price}</div>
+      <p style="margin:16px 0 0"><a class="btn" href="${CONTACT}">${t.book}</a></p>
+    </article>`;
+  }).join("");
+  try{ localStorage.setItem("lang", lang); }catch(e){}
+}
+
+document.querySelectorAll(".lang button").forEach(b => b.addEventListener("click", () => { lang = b.dataset.lang; render(); }));
+
+/* first visit: Ukrainian browser -> UA, everyone else -> EN */
+try{ lang = localStorage.getItem("lang") || ((navigator.language||"").toLowerCase().startsWith("uk") ? "uk" : "en"); }catch(e){}
+render();
+</script>
+</body>
+</html>
