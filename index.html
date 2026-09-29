@@ -4,408 +4,449 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Kristel Magician · Таро та езотеричні консультації</title>
-<meta name="description" content="Таро та езотеричні консультації онлайн. Calm tarot & esoteric sessions by Kristel Magician.">
+<meta name="description" content="Таро та езотеричні консультації онлайн. Kristel Magician.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
 :root {
-  --bg: #0a1620;
-  --bg2: #0f1f2c;
-  --bg3: #132836;
-  --ink: #f0e6d8;
-  --muted: #9bb0bc;
-  --teal: #0d7377;
-  --teal-bright: #14a3a8;
-  --gold: #d4a84b;
-  --gold-soft: #e8c878;
-  --indigo: #1a2744;
-  --line: rgba(20, 163, 168, 0.18);
-  --glass: rgba(15, 31, 44, 0.72);
+  --bg-dark: #1a1424;
+  --bg-mid: #241c32;
+  --bg-light: #f4f0f5;
+  --ink-dark: #f0e8f4;
+  --ink-light: #2a2438;
+  --muted-dark: #b8a8c8;
+  --muted-light: #6a6080;
+  --purple: #6b4a8a;
+  --purple-deep: #4a3068;
+  --lavender: #c4a8e0;
+  --green: #3d8a6a;
+  --green-soft: #5aad88;
+  --gold: #c9a86c;
+  --gold-bright: #e0c48a;
   --serif: "Cormorant Garamond", Georgia, serif;
-  --sans: "Outfit", system-ui, -apple-system, sans-serif;
+  --sans: "Jost", system-ui, sans-serif;
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
 body {
-  background: var(--bg);
-  color: var(--ink);
-  font: 17px/1.65 var(--sans);
-  font-weight: 400;
+  background: var(--bg-dark);
+  color: var(--ink-dark);
+  font: 15.5px/1.55 var(--sans);
+  font-weight: 300;
   -webkit-font-smoothing: antialiased;
 }
 a { color: inherit; text-decoration: none; }
 :focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
 
-.wrap { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
-
-/* subtle peacock gradient bg */
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  background:
-    radial-gradient(ellipse 80% 50% at 15% 10%, rgba(13, 115, 119, 0.18), transparent 50%),
-    radial-gradient(ellipse 60% 40% at 90% 80%, rgba(26, 39, 68, 0.35), transparent 45%),
-    radial-gradient(ellipse 40% 30% at 70% 20%, rgba(212, 168, 75, 0.04), transparent 40%);
-  pointer-events: none;
-  z-index: 0;
-}
-main, header, footer { position: relative; z-index: 1; }
+.wrap { max-width: 920px; margin: 0 auto; padding: 0 22px; }
 
 /* header */
 header {
-  position: sticky;
-  top: 0;
+  position: absolute;
+  top: 0; left: 0; right: 0;
   z-index: 20;
-  background: rgba(10, 22, 32, 0.85);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  border-bottom: 1px solid var(--line);
+  padding: 14px 0;
 }
 header .wrap {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 16px;
-  padding-top: 14px;
-  padding-bottom: 14px;
 }
 .logo {
-  font: 600 22px/1 var(--serif);
-  letter-spacing: 0.02em;
-  color: var(--ink);
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-.logo span {
-  color: var(--gold);
-  font-weight: 500;
+  font: 500 13px/1 var(--sans);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(240, 232, 244, 0.9);
 }
 nav {
   display: flex;
   gap: 22px;
   align-items: center;
-  font-size: 14.5px;
-  font-weight: 400;
-  letter-spacing: 0.02em;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
 }
-nav a {
-  color: var(--muted);
-  transition: color 0.2s;
-}
-nav a:hover { color: var(--ink); }
+nav a { color: rgba(240, 232, 244, 0.7); transition: color 0.2s; }
+nav a:hover { color: #fff; }
 .lang {
   display: flex;
-  border: 1px solid var(--line);
-  border-radius: 99px;
+  border: 1px solid rgba(196, 168, 224, 0.3);
+  border-radius: 2px;
   overflow: hidden;
-  margin-left: 6px;
 }
 .lang button {
   background: none;
   border: 0;
-  color: var(--muted);
-  padding: 5px 13px;
-  font: 500 12.5px var(--sans);
+  color: rgba(240, 232, 244, 0.65);
+  padding: 3px 9px;
+  font: 400 10px var(--sans);
+  letter-spacing: 0.06em;
   cursor: pointer;
-  transition: all 0.2s;
 }
 .lang button[aria-pressed="true"] {
-  background: linear-gradient(135deg, var(--teal), var(--teal-bright));
+  background: rgba(196, 168, 224, 0.25);
   color: #fff;
 }
 
-/* hero */
+/* HERO — compact */
 .hero {
-  padding: 88px 0 72px;
-  display: grid;
-  grid-template-columns: 1.35fr 1fr;
-  gap: 48px;
-  align-items: center;
-}
-h1 {
-  font: 600 clamp(40px, 6.2vw, 68px)/1.08 var(--serif);
-  margin: 0 0 20px;
-  letter-spacing: -0.01em;
-}
-.hero p {
-  color: var(--muted);
-  max-width: 42ch;
-  margin: 0 0 32px;
-  font-size: 17.5px;
-  line-height: 1.7;
-  font-weight: 300;
-}
-.btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background: linear-gradient(135deg, var(--gold), var(--gold-soft));
-  color: #1a1408;
-  font-weight: 600;
-  font-size: 15px;
-  padding: 14px 28px;
-  border-radius: 99px;
-  transition: transform 0.2s, box-shadow 0.2s;
-  box-shadow: 0 4px 20px rgba(212, 168, 75, 0.25);
-}
-.btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 28px rgba(212, 168, 75, 0.35);
-}
-.btn-outline {
-  background: transparent;
-  color: var(--gold);
-  border: 1px solid rgba(212, 168, 75, 0.45);
-  box-shadow: none;
-}
-.btn-outline:hover {
-  background: rgba(212, 168, 75, 0.08);
-  box-shadow: none;
-}
-
-/* candle / peacock eye ornament */
-.ornament {
-  justify-self: center;
   position: relative;
-  width: 160px;
-  height: 220px;
-  display: grid;
-  place-items: center;
-}
-.peacock-eye {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  background:
-    radial-gradient(circle at 50% 45%, #f0e6d8 0 8%, transparent 9%),
-    radial-gradient(circle at 50% 45%, var(--gold) 0 18%, transparent 19%),
-    radial-gradient(circle at 50% 48%, #1a4a5c 0 38%, transparent 39%),
-    radial-gradient(circle at 50% 50%, var(--teal-bright) 0 58%, transparent 59%),
-    radial-gradient(circle at 50% 52%, #0a2a3a 0 78%, transparent 79%),
-    radial-gradient(circle at 50% 55%, var(--indigo) 0 100%);
-  box-shadow:
-    0 0 40px 12px rgba(20, 163, 168, 0.2),
-    0 0 80px 20px rgba(212, 168, 75, 0.08);
-  animation: pulse 4s ease-in-out infinite;
-}
-@keyframes pulse {
-  0%, 100% { transform: scale(1); opacity: 1; }
-  50% { transform: scale(1.04); opacity: 0.92; }
-}
-@media (prefers-reduced-motion: reduce) {
-  .peacock-eye { animation: none; }
-  html { scroll-behavior: auto; }
-}
-
-/* sections */
-section {
-  padding: 72px 0;
-  border-top: 1px solid var(--line);
-}
-h2 {
-  font: 600 clamp(28px, 4vw, 40px)/1.15 var(--serif);
-  margin: 0 0 12px;
-  letter-spacing: -0.01em;
-}
-.lead {
-  color: var(--muted);
-  max-width: 56ch;
-  margin: 0 0 36px;
-  font-weight: 300;
-  font-size: 16.5px;
-}
-
-/* about */
-.about {
-  display: grid;
-  grid-template-columns: 240px 1fr;
-  gap: 40px;
-  align-items: start;
-}
-.photo {
-  aspect-ratio: 3/4;
-  border-radius: 140px 140px 12px 12px;
-  background: var(--bg3);
-  border: 1px dashed rgba(155, 176, 188, 0.35);
-  display: grid;
-  place-items: center;
-  color: var(--muted);
-  font-size: 13.5px;
+  min-height: 56vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  padding: 16px;
-  position: relative;
-  overflow: hidden;
+  padding: 72px 22px 48px;
+  background:
+    linear-gradient(180deg, rgba(26, 20, 36, 0.5) 0%, rgba(26, 20, 36, 0.8) 70%, var(--bg-dark) 100%),
+    radial-gradient(ellipse 80% 60% at 50% 40%, rgba(107, 74, 138, 0.3), transparent 70%);
 }
-.photo::after {
+.hero::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, transparent 60%, rgba(13, 115, 119, 0.15));
+  background:
+    radial-gradient(circle at 18% 28%, rgba(61, 138, 106, 0.1), transparent 38%),
+    radial-gradient(circle at 82% 65%, rgba(196, 168, 224, 0.08), transparent 32%);
   pointer-events: none;
 }
-.about p {
-  color: var(--muted);
-  margin-bottom: 16px;
-  font-weight: 300;
-  max-width: 52ch;
+.hero-inner { position: relative; z-index: 1; max-width: 560px; }
+.hero-stars {
+  color: var(--gold-bright);
+  font-size: 12px;
+  letter-spacing: 12px;
+  margin-bottom: 14px;
+  opacity: 0.85;
+}
+h1 {
+  font: 400 clamp(32px, 5.5vw, 48px)/1.1 var(--serif);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin: 0 0 12px;
+  color: #fff;
+}
+.hero-sub {
+  font: italic 400 15px/1.45 var(--serif);
+  color: var(--lavender);
+  margin: 0 0 24px;
+  opacity: 0.9;
+}
+.btn {
+  display: inline-block;
+  font: 400 11px/1 var(--sans);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 11px 22px;
+  border: 1px solid rgba(255,255,255,0.45);
+  color: #fff;
+  background: transparent;
+  transition: all 0.2s;
+  border-radius: 1px;
+}
+.btn:hover {
+  background: rgba(255,255,255,0.1);
+  border-color: #fff;
+}
+.btn-dark {
+  background: var(--purple-deep);
+  border-color: var(--purple-deep);
+  color: #f0e8f4;
+}
+.btn-dark:hover {
+  background: var(--purple);
+  border-color: var(--purple);
+}
+.btn-light {
+  background: var(--ink-light);
+  border-color: var(--ink-light);
+  color: #fff;
+}
+.btn-light:hover {
+  background: #3a3450;
+}
+.btn-gold {
+  background: transparent;
+  border-color: var(--gold);
+  color: var(--gold-bright);
+}
+.btn-gold:hover {
+  background: rgba(201, 168, 108, 0.12);
 }
 
-/* pricing */
+/* ABOUT — light, compact */
+.about {
+  background: var(--bg-light);
+  color: var(--ink-light);
+  padding: 48px 0;
+}
+.about-grid {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 32px;
+  align-items: center;
+  max-width: 720px;
+  margin: 0 auto;
+}
+.photo-frame {
+  position: relative;
+  aspect-ratio: 3/4;
+  border: 1.5px solid #c8bdd8;
+  border-radius: 100px 100px 6px 6px;
+  padding: 7px;
+  background: #fff;
+}
+.photo-frame::before,
+.photo-frame::after {
+  content: "✦";
+  position: absolute;
+  color: var(--purple);
+  font-size: 10px;
+  opacity: 0.5;
+}
+.photo-frame::before { top: 12px; left: -5px; }
+.photo-frame::after { bottom: 16px; right: -5px; }
+.photo-inner {
+  width: 100%;
+  height: 100%;
+  border-radius: 94px 94px 3px 3px;
+  background: #e8e0f0;
+  display: grid;
+  place-items: center;
+  color: var(--muted-light);
+  font-size: 12px;
+  text-align: center;
+  padding: 12px;
+}
+.about-label {
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--purple);
+  margin-bottom: 6px;
+}
+.about h2 {
+  font: 400 26px/1.15 var(--serif);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin: 0 0 12px;
+  color: var(--ink-light);
+}
+.about p {
+  color: var(--muted-light);
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 8px;
+  max-width: 40ch;
+}
+.about .btn { margin-top: 8px; }
+
+/* PRICES — dark, compact */
+.prices-sec {
+  background: var(--bg-mid);
+  padding: 48px 0 44px;
+  text-align: center;
+}
+.prices-sec h2 {
+  font: 400 26px/1.15 var(--serif);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin: 0 0 6px;
+  color: var(--ink-dark);
+}
+.prices-sec .lead {
+  color: var(--muted-dark);
+  max-width: 38ch;
+  margin: 0 auto 10px;
+  font-size: 13.5px;
+}
 .badge {
   display: none;
-  background: linear-gradient(135deg, var(--teal), #0a5c60);
-  color: #e8f4f4;
-  padding: 4px 14px;
-  border-radius: 99px;
-  font-size: 12.5px;
-  font-weight: 500;
-  letter-spacing: 0.03em;
-  margin-bottom: 20px;
+  margin: 0 auto 24px;
+  width: fit-content;
+  font-size: 9px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--green-soft);
+  border: 1px solid rgba(61, 138, 106, 0.4);
+  padding: 4px 12px;
 }
-html[lang="uk"] .badge { display: inline-block; }
+html[lang="uk"] .badge { display: block; }
 
 .prices {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  gap: 14px;
+  max-width: 820px;
+  margin: 0 auto;
 }
 .card {
-  background: var(--glass);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid var(--line);
-  padding: 28px 24px;
-  border-radius: 16px;
+  background: rgba(26, 20, 36, 0.55);
+  border: 1px solid rgba(196, 168, 224, 0.14);
+  border-radius: 80px 80px 6px 6px;
+  padding: 24px 16px 20px;
   display: flex;
   flex-direction: column;
-  transition: border-color 0.25s, transform 0.25s, box-shadow 0.25s;
+  transition: border-color 0.2s, box-shadow 0.2s;
 }
 .card:hover {
-  border-color: rgba(20, 163, 168, 0.35);
-  transform: translateY(-3px);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
+  border-color: rgba(196, 168, 224, 0.32);
+  box-shadow: 0 6px 28px rgba(107, 74, 138, 0.12);
 }
 .card.feat {
-  border-color: rgba(212, 168, 75, 0.45);
-  background: linear-gradient(160deg, rgba(212, 168, 75, 0.06), var(--glass));
+  border-color: rgba(201, 168, 108, 0.4);
   position: relative;
 }
 .card.feat::before {
-  content: "";
+  content: "✦";
   position: absolute;
-  top: 0;
-  left: 24px;
-  right: 24px;
-  height: 2px;
-  background: linear-gradient(90deg, transparent, var(--gold), transparent);
-  border-radius: 2px;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--gold);
+  font-size: 11px;
 }
 .card h3 {
-  font: 600 24px/1.2 var(--serif);
-  margin: 0 0 4px;
+  font: 500 18px/1.2 var(--serif);
+  margin: 4px 0 4px;
+  color: var(--ink-dark);
 }
 .dur {
-  color: var(--muted);
-  font-size: 13.5px;
-  margin: 0 0 16px;
-  font-weight: 300;
+  color: var(--green-soft);
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin: 0 0 10px;
 }
 .card ul {
-  margin: 0 0 22px;
-  padding-left: 18px;
-  color: var(--muted);
-  font-size: 14.5px;
-  font-weight: 300;
+  list-style: none;
+  margin: 0 0 14px;
+  padding: 0;
+  color: var(--muted-dark);
+  font-size: 12.5px;
   flex: 1;
   line-height: 1.7;
 }
-.card ul li { margin-bottom: 4px; }
+.card ul li::before {
+  content: "· ";
+  color: var(--lavender);
+}
 .price {
-  font: 600 32px/1 var(--serif);
-  color: var(--gold);
+  font: 500 24px/1 var(--serif);
+  color: var(--gold-bright);
+  margin-bottom: 1px;
 }
 .old {
-  color: var(--muted);
+  color: var(--muted-dark);
   text-decoration: line-through;
-  font-size: 15px;
-  margin-left: 8px;
-  font-family: var(--sans);
-  font-weight: 400;
-  opacity: 0.7;
+  font-size: 11.5px;
+  opacity: 0.55;
+  display: block;
+  margin-bottom: 12px;
+}
+.card .btn {
+  margin-top: auto;
+  font-size: 10px;
+  padding: 9px 14px;
+  align-self: center;
 }
 .note {
-  margin-top: 24px;
-  color: var(--muted);
-  font-size: 13.5px;
-  font-weight: 300;
+  margin-top: 18px;
+  color: var(--muted-dark);
+  font-size: 12px;
+  opacity: 0.7;
 }
 
-/* gallery / space */
+/* SPACE — light, compact */
+.space {
+  background: var(--bg-light);
+  color: var(--ink-light);
+  padding: 44px 0;
+  text-align: center;
+}
+.space h2 {
+  font: 400 24px/1.15 var(--serif);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin: 0 0 6px;
+}
+.space .lead {
+  color: var(--muted-light);
+  max-width: 36ch;
+  margin: 0 auto 24px;
+  font-size: 13.5px;
+}
 .gallery {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 18px;
+  gap: 14px;
+  max-width: 720px;
+  margin: 0 auto;
 }
 .ph {
-  aspect-ratio: 4/3;
-  background: var(--bg3);
-  border: 1px dashed rgba(155, 176, 188, 0.28);
-  border-radius: 12px;
+  aspect-ratio: 1;
+  border-radius: 50% 50% 6px 6px;
+  background: #e4dceb;
+  border: 1.5px solid #c8bdd8;
   display: grid;
   place-items: center;
-  color: var(--muted);
-  font-size: 13.5px;
+  color: var(--muted-light);
+  font-size: 12px;
   padding: 12px;
   text-align: center;
-  transition: border-color 0.2s;
 }
-.ph:hover { border-color: rgba(20, 163, 168, 0.4); }
 .cap {
-  margin: 10px 0 0;
-  font-size: 14px;
-  color: var(--muted);
-  font-weight: 300;
-  text-align: center;
+  margin: 8px 0 0;
+  font-size: 11px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--muted-light);
 }
 
-/* contact */
+/* CONTACT — dark, compact */
+.contact {
+  background: var(--bg-dark);
+  padding: 44px 0 36px;
+  text-align: center;
+}
+.contact h2 {
+  font: 400 24px/1.15 var(--serif);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin: 0 0 6px;
+}
+.contact .lead {
+  color: var(--muted-dark);
+  max-width: 34ch;
+  margin: 0 auto 20px;
+  font-size: 13.5px;
+}
 .contact-btns {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
-  margin-top: 8px;
+  gap: 10px;
+  justify-content: center;
 }
 
 footer {
-  padding: 32px 0;
-  border-top: 1px solid var(--line);
-  color: var(--muted);
-  font-size: 13.5px;
-  font-weight: 300;
+  background: var(--bg-dark);
+  padding: 16px 0 24px;
+  border-top: 1px solid rgba(196, 168, 224, 0.1);
+  color: var(--muted-dark);
+  font-size: 11px;
   text-align: center;
+  letter-spacing: 0.05em;
 }
 
-/* responsive */
-@media (max-width: 820px) {
-  .hero, .about { grid-template-columns: 1fr; }
-  .ornament { order: -1; height: 140px; }
-  .peacock-eye { width: 90px; height: 90px; }
-  .prices, .gallery { grid-template-columns: 1fr; }
+@media (max-width: 720px) {
   nav a { display: none; }
-  .photo { max-width: 200px; margin: 0 auto; }
-  .about { text-align: center; }
+  .about-grid { grid-template-columns: 1fr; text-align: center; gap: 20px; }
+  .photo-frame { max-width: 160px; margin: 0 auto; }
   .about p { margin-left: auto; margin-right: auto; }
-  h1 { text-align: center; }
-  .hero p { margin-left: auto; margin-right: auto; text-align: center; }
-  .hero .btn { display: flex; margin: 0 auto; width: fit-content; }
-}
-@media (max-width: 480px) {
-  .hero { padding: 56px 0 48px; }
-  section { padding: 52px 0; }
+  .prices, .gallery { grid-template-columns: 1fr; max-width: 280px; }
+  .hero { min-height: 48vh; padding: 64px 18px 40px; }
+  .about, .prices-sec, .space, .contact { padding-top: 36px; padding-bottom: 36px; }
 }
 </style>
 </head>
@@ -413,7 +454,7 @@ footer {
 
 <header>
   <div class="wrap">
-    <a class="logo" href="#top">Kristel <span>Magician</span></a>
+    <a class="logo" href="#top">Kristel Magician</a>
     <nav>
       <a href="#about" data-i18n="nav_about"></a>
       <a href="#prices" data-i18n="nav_prices"></a>
@@ -428,29 +469,33 @@ footer {
 </header>
 
 <main id="top">
-  <div class="wrap hero">
-    <div>
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-stars">✦ &nbsp; ✦ &nbsp; ✦</div>
       <h1 data-i18n="h1"></h1>
-      <p data-i18n="hero_p"></p>
+      <p class="hero-sub" data-i18n="hero_p"></p>
       <a class="btn" href="#prices" data-i18n="cta"></a>
     </div>
-    <div class="ornament" aria-hidden="true">
-      <div class="peacock-eye"></div>
-    </div>
-  </div>
+  </section>
 
-  <section id="about">
-    <div class="wrap about">
-      <div class="photo" data-i18n="photo"></div>
-      <div>
-        <h2 data-i18n="about_h"></h2>
-        <p data-i18n="about_p1"></p>
-        <p data-i18n="about_p2"></p>
+  <section class="about" id="about">
+    <div class="wrap">
+      <div class="about-grid">
+        <div class="photo-frame">
+          <div class="photo-inner" data-i18n="photo"></div>
+        </div>
+        <div>
+          <p class="about-label" data-i18n="about_label"></p>
+          <h2 data-i18n="about_h"></h2>
+          <p data-i18n="about_p1"></p>
+          <p data-i18n="about_p2"></p>
+          <a class="btn btn-light" href="#prices" data-i18n="about_cta"></a>
+        </div>
       </div>
     </div>
   </section>
 
-  <section id="prices">
+  <section class="prices-sec" id="prices">
     <div class="wrap">
       <h2 data-i18n="prices_h"></h2>
       <p class="lead" data-i18n="prices_lead"></p>
@@ -460,7 +505,7 @@ footer {
     </div>
   </section>
 
-  <section id="space">
+  <section class="space" id="space">
     <div class="wrap">
       <h2 data-i18n="space_h"></h2>
       <p class="lead" data-i18n="space_lead"></p>
@@ -481,15 +526,14 @@ footer {
     </div>
   </section>
 
-  <section id="contact">
+  <section class="contact" id="contact">
     <div class="wrap">
       <h2 data-i18n="contact_h"></h2>
       <p class="lead" data-i18n="contact_p"></p>
       <div class="contact-btns">
-        <!-- TODO: заміни на свої посилання -->
-        <a class="btn" href="https://t.me/your_username">Telegram</a>
-        <a class="btn btn-outline" href="https://instagram.com/your_username">Instagram</a>
-        <a class="btn btn-outline" href="mailto:you@example.com">Email</a>
+        <a class="btn btn-dark" href="https://t.me/your_username">Telegram</a>
+        <a class="btn btn-gold" href="https://instagram.com/your_username">Instagram</a>
+        <a class="btn" href="mailto:you@example.com">Email</a>
       </div>
     </div>
   </section>
@@ -500,101 +544,79 @@ footer {
 </footer>
 
 <script>
-/* ===== PRICES ===== */
 const SERVICES = [
   { id: "quick", uah: 900,  uahOld: 1600, eur: 60 },
   { id: "full",  uah: 1500, uahOld: 2700, eur: 100, featured: true },
   { id: "deep",  uah: 2200, uahOld: 3800, eur: 150 }
 ];
 
-/* ===== TEXTS ===== */
 const T = {
   uk: {
     nav_about: "Про мене",
-    nav_prices: "Ціни",
+    nav_prices: "Послуги",
     nav_space: "Простір",
     nav_contact: "Контакти",
-    h1: "Таро та езотеричні консультації",
-    hero_p: "Спокійна розмова в атмосфері павича і свічок: розклад, який допомагає побачити ситуацію ясніше та знайти наступний крок.",
-    cta: "Обрати консультацію",
-    photo: "Тут буде ваше фото",
-    about_h: "Про мене",
-    about_p1: "Мене звати Kristel Magician. Я працюю з картами Таро та езотеричними практиками. Розкажіть тут коротко, як ви прийшли до цього шляху.",
-    about_p2: "Опишіть свій підхід: з якими питаннями до вас звертаються, як проходить сесія, що людина отримає після розмови.",
-    prices_h: "Консультації та ціни",
-    prices_lead: "Оберіть формат, який підходить вам. Усі консультації проходять онлайн.",
+    h1: "Знайди свою<br>внутрішню магію",
+    hero_p: "Таро та езотеричні консультації з Kristel Magician",
+    cta: "Дізнатися більше",
+    photo: "Ваше фото",
+    about_label: "Ваш езотеричний гід",
+    about_h: "Мене звати<br>Kristel Magician",
+    about_p1: "Я працюю з картами Таро та езотеричними практиками. Тут можна коротко розповісти, як ви прийшли до цього шляху.",
+    about_p2: "Опишіть свій підхід: з якими питаннями звертаються, як проходить сесія, що людина забирає з собою.",
+    about_cta: "Переглянути послуги",
+    prices_h: "Послуги",
+    prices_lead: "Оберіть формат. Усі сесії — онлайн.",
     discount: "Знижка для України",
-    prices_note: "Ціни вказано за одну консультацію. Оплата наперед.",
+    prices_note: "Ціна за одну консультацію. Оплата наперед.",
     space_h: "Мій простір",
-    space_lead: "Кімната, де проходять консультації, свічки ручної роботи та колода, з якою я працюю.",
+    space_lead: "Кімната, свічки і колода, з якою я працюю.",
     ph_room: "Фото кімнати",
     ph_candles: "Фото свічок",
     ph_cards: "Фото колоди",
-    cap_room: "Кімната для консультацій",
-    cap_candles: "Свічки ручної роботи",
-    cap_cards: "Моя колода",
-    contact_h: "Записатися",
-    contact_p: "Напишіть мені, і ми оберемо зручний час.",
+    cap_room: "Кімната",
+    cap_candles: "Свічки",
+    cap_cards: "Колода",
+    contact_h: "Контакти",
+    contact_p: "Напишіть — підберемо зручний час.",
     footer: "© 2026 Kristel Magician",
-    quick: {
-      n: "Швидкий розклад",
-      d: "1 питання · 3 карти",
-      l: ["Одне чітке питання", "Розклад на 3 карти", "Відповідь текстом або голосом"]
-    },
-    full: {
-      n: "Повна консультація",
-      d: "45 хв",
-      l: ["До 3 питань", "Детальний розклад", "Записи розмови після сесії"]
-    },
-    deep: {
-      n: "Глибока сесія",
-      d: "~75 хв",
-      l: ["Аналіз ситуації", "Кілька розкладів", "Рекомендації та план дій"]
-    },
+    quick: { n: "Швидкий розклад", d: "1 питання · 3 карти", l: ["Одне питання", "Розклад на 3 карти", "Відповідь текстом або голосом"] },
+    full:  { n: "Повна консультація", d: "45 хвилин", l: ["До 3 питань", "Детальний розклад", "Записи після сесії"] },
+    deep:  { n: "Глибока сесія", d: "~75 хвилин", l: ["Аналіз ситуації", "Кілька розкладів", "Рекомендації та план"] },
     book: "Записатися"
   },
   en: {
     nav_about: "About",
-    nav_prices: "Pricing",
-    nav_space: "My space",
+    nav_prices: "Services",
+    nav_space: "Space",
     nav_contact: "Contact",
-    h1: "Tarot & esoteric consultations",
-    hero_p: "A calm conversation in the atmosphere of peacock light and candles: a reading that helps you see your situation more clearly and find your next step.",
-    cta: "Choose a session",
-    photo: "Your photo goes here",
-    about_h: "About me",
-    about_p1: "I'm Kristel Magician. I work with Tarot and esoteric practices. Briefly tell here how you came to this path.",
-    about_p2: "Describe your approach: what people come to you for, how a session runs, and what they leave with.",
-    prices_h: "Sessions & pricing",
-    prices_lead: "Pick the format that suits you. All sessions take place online.",
+    h1: "Find your<br>inner magic",
+    hero_p: "Tarot & esoteric consultations with Kristel Magician",
+    cta: "Learn more",
+    photo: "Your photo",
+    about_label: "Your spiritual guide",
+    about_h: "My name is<br>Kristel Magician",
+    about_p1: "I work with Tarot and esoteric practices. Briefly share how you came to this path.",
+    about_p2: "Describe your approach: what people come for, how a session unfolds, and what they leave with.",
+    about_cta: "View services",
+    prices_h: "Services",
+    prices_lead: "Choose a format. All sessions are online.",
     discount: "",
-    prices_note: "Prices are per session. Payment in advance.",
+    prices_note: "Price per session. Payment in advance.",
     space_h: "My space",
-    space_lead: "The room where sessions happen, my handmade candles and the deck I read with.",
+    space_lead: "The room, candles and the deck I work with.",
     ph_room: "Room photo",
     ph_candles: "Candles photo",
     ph_cards: "Deck photo",
-    cap_room: "The consultation room",
-    cap_candles: "Handmade candles",
-    cap_cards: "My deck",
-    contact_h: "Book a session",
-    contact_p: "Message me and we'll find a time that works.",
+    cap_room: "The room",
+    cap_candles: "Candles",
+    cap_cards: "The deck",
+    contact_h: "Contact",
+    contact_p: "Message me — we'll find a time that works.",
     footer: "© 2026 Kristel Magician",
-    quick: {
-      n: "Quick reading",
-      d: "1 question · 3 cards",
-      l: ["One clear question", "3-card spread", "Answer by text or voice"]
-    },
-    full: {
-      n: "Full consultation",
-      d: "45 min",
-      l: ["Up to 3 questions", "Detailed spread", "Session notes sent afterwards"]
-    },
-    deep: {
-      n: "Deep session",
-      d: "~75 min",
-      l: ["In-depth analysis", "Several spreads", "Guidance and action plan"]
-    },
+    quick: { n: "Quick reading", d: "1 question · 3 cards", l: ["One question", "3-card spread", "Answer by text or voice"] },
+    full:  { n: "Full consultation", d: "45 minutes", l: ["Up to 3 questions", "Detailed spread", "Notes after the session"] },
+    deep:  { n: "Deep session", d: "~75 minutes", l: ["In-depth analysis", "Several spreads", "Guidance and plan"] },
     book: "Book now"
   }
 };
@@ -606,22 +628,22 @@ function render() {
   const t = T[lang];
   document.documentElement.lang = lang;
   document.querySelectorAll("[data-i18n]").forEach(el => {
-    el.textContent = t[el.dataset.i18n] ?? "";
+    el.innerHTML = t[el.dataset.i18n] ?? "";
   });
   document.querySelectorAll(".lang button").forEach(b =>
     b.setAttribute("aria-pressed", b.dataset.lang === lang)
   );
   document.getElementById("priceGrid").innerHTML = SERVICES.map(s => {
     const c = t[s.id];
-    const price = lang === "uk"
-      ? `<span class="price">${s.uah} ₴</span><span class="old">${s.uahOld} ₴</span>`
-      : `<span class="price">€${s.eur}</span>`;
+    const priceBlock = lang === "uk"
+      ? `<div class="price">${s.uah} ₴</div><span class="old">${s.uahOld} ₴</span>`
+      : `<div class="price">€${s.eur}</div><span class="old" style="visibility:hidden">—</span>`;
     return `<article class="card${s.featured ? " feat" : ""}">
       <h3>${c.n}</h3>
       <p class="dur">${c.d}</p>
       <ul>${c.l.map(i => `<li>${i}</li>`).join("")}</ul>
-      <div>${price}</div>
-      <p style="margin:18px 0 0"><a class="btn" href="${CONTACT}" style="font-size:14px;padding:11px 22px">${t.book}</a></p>
+      ${priceBlock}
+      <a class="btn" href="${CONTACT}">${t.book}</a>
     </article>`;
   }).join("");
   try { localStorage.setItem("lang", lang); } catch (e) {}
